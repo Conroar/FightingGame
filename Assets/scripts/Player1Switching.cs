@@ -26,6 +26,9 @@ public class Player1Switching : MonoBehaviour
     void ChangeSprite()
     {
         spriteRenderer.sprite = spriteArray[0];
+        spriteRenderer.sprite = spriteArray[1];
+        spriteRenderer.sprite = spriteArray[2];
+        spriteRenderer.sprite = spriteArray[3];
     }
 
     // public Queue myQ = new Queue();

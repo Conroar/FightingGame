@@ -5,10 +5,10 @@ using UnityEngine;
 public class JumpPlayer2 : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public float jumpAmount = 60;
-    public float gravityScale = 10;
-    public float fallingGravityScale = 20;
-    public float runningSpeed = 60;
+    public float jumpAmount;
+    public float gravityScale;
+    public float fallingGravityScale;
+    public float runningSpeed;
 
     void Update()
     {

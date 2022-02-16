@@ -5,10 +5,10 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public float jumpAmount = 60;
-    public float gravityScale = 10;
-    public float fallingGravityScale = 20;
-    public float runningSpeed = 60;
+    public float jumpAmount;
+    public float gravityScale;
+    public float fallingGravityScale;
+    public float runningSpeed;
 
     [HideInInspector]
     public bool isFacingLeft;
@@ -19,21 +19,21 @@ public class Jump : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W)) //Jump
         {
             rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
             isJumping = true;
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S)) //Fast Fall
         {
             rb.AddForce(Vector2.down * jumpAmount, ForceMode2D.Impulse);
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A)) //Left
         {
             rb.AddForce(Vector2.left * runningSpeed, ForceMode2D.Impulse);
             
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D)) //Right
         {
             rb.AddForce(Vector2.right * runningSpeed, ForceMode2D.Impulse);
         }
