@@ -10,11 +10,19 @@ public class Jump : MonoBehaviour
     public float fallingGravityScale = 20;
     public float runningSpeed = 60;
 
+    [HideInInspector]
+    public bool isFacingLeft;
+    [HideInInspector]
+    public bool isGrounded;
+    [HideInInspector]
+    public bool isJumping;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
             rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
+            isJumping = true;
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
@@ -23,6 +31,7 @@ public class Jump : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             rb.AddForce(Vector2.left * runningSpeed, ForceMode2D.Impulse);
+            
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
