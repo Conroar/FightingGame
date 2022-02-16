@@ -5,10 +5,12 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public float jumpAmount;
-    public float gravityScale;
-    public float fallingGravityScale;
-    public float runningSpeed;
+    public float jumpAmount = 60;
+    public float gravityScale = 10;
+    public float fallingGravityScale = 20;
+    public float runningSpeed = 60;
+
+    public Animator anim;
 
     [HideInInspector]
     public bool isFacingLeft;

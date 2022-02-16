@@ -286,9 +286,9 @@ GameObject:
   - component: {fileID: 227725216}
   - component: {fileID: 227725214}
   - component: {fileID: 227725218}
-  - component: {fileID: 227725212}
   - component: {fileID: 227725221}
   - component: {fileID: 227725220}
+  - component: {fileID: 227725222}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -296,21 +296,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &227725212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227725211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0a787f07b64eb1479840e13daeaa31e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 227725216}
-  newSprite: {fileID: 21300000, guid: b16392195d7285a4b9d9ed46c65e22e4, type: 3}
-  spriteArray: []
 --- !u!50 &227725214
 Rigidbody2D:
   serializedVersion: 4
@@ -457,6 +442,25 @@ MonoBehaviour:
   isFacingLeft: 0
   isGrounded: 0
   isJumping: 0
+--- !u!114 &227725222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227725211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a787f07b64eb1479840e13daeaa31e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 227725216}
+  newSprite: {fileID: 21300000, guid: b16392195d7285a4b9d9ed46c65e22e4, type: 3}
+  spriteArray:
+  - {fileID: 21300000, guid: 369e8bfd87a73b4499b452d88ad55372, type: 3}
+  - {fileID: 21300000, guid: b16392195d7285a4b9d9ed46c65e22e4, type: 3}
+  - {fileID: 21300000, guid: b16392195d7285a4b9d9ed46c65e22e4, type: 3}
+  - {fileID: 21300000, guid: b16392195d7285a4b9d9ed46c65e22e4, type: 3}
 --- !u!1 &238342594
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +474,7 @@ GameObject:
   - component: {fileID: 238342596}
   - component: {fileID: 238342595}
   m_Layer: 0
-  m_Name: Static Sprite (3)
+  m_Name: WallR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,7 +587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238342594}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 20.6, y: -1.2924, z: 0}
+  m_LocalPosition: {x: 21.2, y: -1.6, z: 0}
   m_LocalScale: {x: 27.70879, y: 7.4988, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -603,7 +607,7 @@ GameObject:
   - component: {fileID: 492660091}
   - component: {fileID: 492660090}
   m_Layer: 0
-  m_Name: Static Sprite
+  m_Name: WallB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,7 +720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492660089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4008, y: -9.9, z: 0}
+  m_LocalPosition: {x: -0.2, y: -9.7, z: 0}
   m_LocalScale: {x: 46.39836, y: 5.1098714, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -980,7 +984,7 @@ GameObject:
   - component: {fileID: 1183797758}
   - component: {fileID: 1183797757}
   m_Layer: 0
-  m_Name: Static Sprite (1)
+  m_Name: WallT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1093,7 +1097,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183797756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1728, y: 10.4, z: 0}
+  m_LocalPosition: {x: 0.5, y: 10.7, z: 0}
   m_LocalScale: {x: 49.668102, y: 7.069982, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1113,7 +1117,7 @@ GameObject:
   - component: {fileID: 1519781134}
   - component: {fileID: 1519781133}
   m_Layer: 0
-  m_Name: Static Sprite (2)
+  m_Name: WallL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1226,7 +1230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519781132}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -21.4, y: -0.339, z: 0}
+  m_LocalPosition: {x: -21.3, y: -0.6, z: 0}
   m_LocalScale: {x: 25.947962, y: 6.028629, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
