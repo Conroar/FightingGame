@@ -24,8 +24,8 @@ public class CameraController : MonoBehaviour
         float minSizeX = minSizeY * Screen.width / Screen.height;
 
         //multiplying by 0.5, because the ortographicSize is actually half the height
-        float width = Mathf.Abs(player1.position.x - player2.position.x) * 0.5f;
-        float height = Mathf.Abs(player1.position.y - player2.position.y) * 0.5f;
+        float width = Mathf.Abs(player1.position.x - player2.position.x) * 0.6f;
+        float height = Mathf.Abs(player1.position.y - player2.position.y) * 0.6f;
 
         //computing the size
         float camSizeX = Mathf.Max(width, minSizeX);

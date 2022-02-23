@@ -18,6 +18,10 @@ public class Jump : MonoBehaviour
     public bool isGrounded;
     [HideInInspector]
     public bool isJumping;
+    [HideInInspector]
+    public bool isShooting;
+    [HidInInspector]
+    public bool shootDelay;
 
     void Update()
     {
@@ -38,6 +42,10 @@ public class Jump : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D)) //Right
         {
             rb.AddForce(Vector2.right * runningSpeed, ForceMode2D.Impulse);
+        }
+        if (Input.GetButtonDown("Fire"))
+        {
+            
         }
 
 
