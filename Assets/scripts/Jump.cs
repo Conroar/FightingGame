@@ -20,7 +20,7 @@ public class Jump : MonoBehaviour
     public bool isJumping;
     [HideInInspector]
     public bool isShooting;
-    [HidInInspector]
+    [HideInInspector]
     public bool shootDelay;
 
     void Update()
