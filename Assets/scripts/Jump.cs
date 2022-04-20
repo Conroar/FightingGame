@@ -9,8 +9,7 @@ public class Jump : MonoBehaviour
     public float gravityScale = 10;
     public float fallingGravityScale = 20;
     public float runningSpeed = 60;
-
-    public Animator anim;
+    public KeyCode attack;
 
     [HideInInspector]
     public bool isFacingLeft;
@@ -37,15 +36,17 @@ public class Jump : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A)) //Left
         {
             rb.AddForce(Vector2.left * runningSpeed, ForceMode2D.Impulse);
-            
         }
         if (Input.GetKeyDown(KeyCode.D)) //Right
         {
             rb.AddForce(Vector2.right * runningSpeed, ForceMode2D.Impulse);
         }
-        if (Input.GetButtonDown("Fire"))
+        if (Input.GetKeyDown(attack))
         {
-            
+            if (gameObject.tag.Equals("Player1") == true)
+            {
+                FindObjectOfType<GameController>().HurtP1();
+            }
         }
 
 

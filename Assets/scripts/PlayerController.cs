@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask whatIsGround;
 
+    public GameObject bullet;
+    public Transform bulletHB;
+
     public bool isGrounded;
 
     // Start is called before the first frame update
@@ -39,9 +42,28 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.left * moveSpeed, ForceMode2D.Impulse);
 
         }
+        if (Input.GetKeyDown(attack))
+        {
+            //OnCollisionEnter();
+        }
         if (Input.GetKeyDown(right)) //Right
         {
             rb.AddForce(Vector2.right * moveSpeed, ForceMode2D.Impulse);
         }
     }
+    /*
+    void OnCollisionEnter(Collider target)
+    {
+        if (target.gameObject.tag.Equals("Player1") == true)
+        {
+            //FindObjectOfType<GameManager>().HurtP1();
+        }
+        if (target.gameObject.tag.Equals("Player2") == true)
+        {
+            //FindObjectOfType<GameManager>().HurtP2();
+        }
+
+    }
+    */
+
 }
